@@ -1,28 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    
+
     <title>Actual weather</title>
 </head>
+
 <body>
-   
+
     <div class="location">
         <h1 class="location-timezone">Timezone</h1>
-        <canvas class="icon" width="128" height="128"></canvas>
+        <div id="icon"><img src="" alt="icon" id="wicon"></div>
     </div>
+
+
     <div class="temperature">
-        <div class="degree-section">
-        <h2 class="temperature-degree">34</h2>
-        <span>&degC</span>
-    </div>
+        <span>Текущая температура</span>
+        <div class="deg">
+            <div class="temperature-current">current temp</div> <span>&degC</span>
+        </div>
+
         <div class="temperature-description">very cold</div>
 
+
+        <div class="degree-section">
+            <div class="temperature-item">
+                <h2 class="day-time">morning</h2>
+                <div class="deg">
+                    <h2 class="morning-degree title">34</h2>
+                    <span>&degC</span>
+                </div>
+
+            </div>
+            <div class="temperature-item">
+                <h2 class="day-time">afternoon</h2>
+                <div class="deg">
+                    <h2 class="afternoon-degree">34</h2>
+                    <span>&degC</span>
+                </div>
+
+            </div>
+            <div class="temperature-item">
+                <h2 class="day-time">evening</h2>
+                <div class="deg">
+                    <h2 class="evening-degree">34</h2>
+                    <span>&degC</span>
+                </div>
+
+            </div>
+            <div class="temperature-item">
+                <h2 class="day-time">night</h2>
+                <div class="deg">
+                    <h2 class="night-degree">34</h2>
+                    <span>&degC</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
     </div>
-    <script src="skycons.js"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

@@ -18,15 +18,16 @@ body {
 .location,
 .temperature {
   height: 30vh;
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: space-around;
   align-items: center;
 }
 
 .location .temperature-description,
-.temperature .temperature-description {
-  font-size: 20px;
+.temperature .temperature-description,
+.temperature-current {
+  font-size: 30px;
 }
 
 .location.temperature,
@@ -36,16 +37,62 @@ body {
 
 .degree-section {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   cursor: pointer;
+  margin: auto;
+  text-align: center;
+  justify-content: space-between;
 }
 
-.degree-section span {
-  margin-left: 10px;
-  font-size: 33px;
+span {
+  font-size: 22px;
 }
 
-.degree-section h2 {
-  font-size: 40px;
+.temperature-item {
+  margin-top: 20px;
+  flex-wrap: wrap;
+  display: flex;
+  align-items: center;
+  width: 180px;
 }
-/*# sourceMappingURL=style.css.map */
+.temperature-item h2 {
+  font-size: 25px;
+}
+.day-time {
+  width: 100%;
+}
+.deg {
+  text-align: center;
+  margin: auto;
+  display: flex;
+}
+
+@media (max-width: 1450px) {
+  .temperature-item {
+    width: 50%;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 750px) {
+  .degree-section {
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .temperature-item {
+    width: 50%;
+    margin-top: 20px;
+  }
+  .temperature-description {
+    margin-bottom: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .location,
+  .temperature {
+    width: auto;
+    height: auto;
+  }
+}
+
